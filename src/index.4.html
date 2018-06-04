@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Justify-content</title>
+  <title>Align-items</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/style.3.css">
+  <link rel="stylesheet" href="./css/style.4.css">
 </head>
-
 <body>
   <div class="container">
-    <h2>Justify-content</h2>
-    <ul>
-        <li>действие блочной модели продолжается (margin/padding)</li>
+      <h2>Align-items</h2>
+      <h4>Расположение вдоль вспомогательной оси</h4>
+      <ul>
+        <li>
+          <h4>stretch</h4>
+          <div class="flex-parent stretch">
+              <div class="flex-child">1</div>
+              <div class="flex-child">2</div>
+              <div class="flex-child">4</div>
+              <div class="flex-child">3</div>
+              <div class="flex-child">5</div>
+              <div class="flex-child">6</div>
+            </div>
+        </li>
         <li>
           <h4>flex-start</h4>
           <div class="flex-parent flex-start">
               <div class="flex-child">1</div>
               <div class="flex-child">2</div>
-              <div class="flex-child">3</div>
               <div class="flex-child">4</div>
+              <div class="flex-child">3</div>
               <div class="flex-child">5</div>
               <div class="flex-child">6</div>
             </div>
@@ -32,41 +41,19 @@
           <div class="flex-parent flex-end">
               <div class="flex-child">1</div>
               <div class="flex-child">2</div>
-              <div class="flex-child">3</div>
               <div class="flex-child">4</div>
+              <div class="flex-child">3</div>
               <div class="flex-child">5</div>
               <div class="flex-child">6</div>
             </div>
         </li>
         <li>
-          <h4>space-between</h4>
-          <div class="flex-parent space-between">
+          <h4>baseline</h4>
+          <div class="flex-parent baseline">
               <div class="flex-child">1</div>
               <div class="flex-child">2</div>
-              <div class="flex-child">3</div>
               <div class="flex-child">4</div>
-              <div class="flex-child">5</div>
-              <div class="flex-child">6</div>
-            </div>
-        </li>
-        <li>
-          <h4>space-around</h4>
-          <div class="flex-parent space-around">
-              <div class="flex-child">1</div>
-              <div class="flex-child">2</div>
               <div class="flex-child">3</div>
-              <div class="flex-child">4</div>
-              <div class="flex-child">5</div>
-              <div class="flex-child">6</div>
-            </div>
-        </li>
-        <li>
-          <h4>space-evenly</h4>
-          <div class="flex-parent space-evenly">
-              <div class="flex-child">1</div>
-              <div class="flex-child">2</div>
-              <div class="flex-child">3</div>
-              <div class="flex-child">4</div>
               <div class="flex-child">5</div>
               <div class="flex-child">6</div>
             </div>
@@ -76,15 +63,14 @@
           <div class="flex-parent center">
             <div class="flex-child">1</div>
             <div class="flex-child">2</div>
-            <div class="flex-child">3</div>
             <div class="flex-child">4</div>
+            <div class="flex-child">3</div>
             <div class="flex-child">5</div>
             <div class="flex-child">6</div>
           </div>
         </li>
-    </ul>
+      </ul>
   </div>
-  <a class="back" href="./index.html">back</a>
+  <a class="back" href="../index.html">back</a>
 </body>
-
 </html>
