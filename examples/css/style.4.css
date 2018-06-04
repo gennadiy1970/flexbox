@@ -1,0 +1,33 @@
+.flex-parent {
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+.flex-child {
+  min-height: 50px;
+  width: 50px;
+}
+
+.stretch {
+  align-items: stretch;
+}
+
+.flex-start {
+  align-items: flex-start;
+}
+
+.flex-end {
+  align-items: flex-end;
+}
+
+.baseline {
+  align-items: baseline;
+}
+
+.baseline .flex-child:nth-of-type(1) {
+  font-size: 50px;
+}
+
+.center {
+  align-items: center;
+}

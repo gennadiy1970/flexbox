@@ -1,0 +1,47 @@
+.flex-parent {
+  min-height: 200px;
+}
+
+.flex-child {
+  height: 100px;
+  min-width: 100px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.flex-child:nth-of-type(2) {
+  /* height: auto; */
+  align-self: auto;
+}
+
+.flex-child:nth-of-type(2) {
+  /* height: auto; */
+  align-self: center;
+}
+
+.flex-child:nth-of-type(3) {
+  height: auto;
+  align-self: stretch;
+}
+
+.flex-child:nth-of-type(4) {
+  /* height: auto; */
+  align-self: baseline;
+}
+
+.flex-child:nth-of-type(5) {
+  /* height: auto; */
+  align-self: flex-end;
+}
+
+.flex-child:nth-of-type(6) {
+  /* height: auto; */
+  align-self: flex-start;
+}
+
+.flex-child:nth-of-type(7) {
+  /* height: auto; */
+  align-self: initial;
+  background: #f00;
+}

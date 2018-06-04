@@ -1,0 +1,13 @@
+.flex-parent2 {
+  min-height: 200px;
+  margin-top: 50px;
+  display: flex;
+  /* display: inline-flex; */
+  background: grey;
+}
+
+.flex-parent2 > .flex-child {
+  /* width: 100px; */
+  /* height: 100px;  */
+
+}

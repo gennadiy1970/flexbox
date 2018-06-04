@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex-Shrink</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/style.8.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Flex-Shrink</h2>
+    <h4>Равный flex-basis (200px)</h4>
+    <h4>Равный flex-shrink (1 по умолчанию)</h4>
+    <div class="flex-parent">
+      <div class="flex-child">1</div>
+      <div class="flex-child">2</div>
+      <div class="flex-child">3</div>
+      <div class="flex-child">4</div>
+      <div class="flex-child">5</div>
+      <div class="flex-child">6</div>
+    </div>
+  <h4>flex-shrink равны номеру блока</h4>
+  <h4>недостаток места =  6 * 200 - 960 = 240</h4>
+  <h4>1+2+3+4+5+6=21частей. 240/21=11.43px </h4>
+    <h4>200px-1*11.43; 200px-2*11.43; 200px-3*11.43;...</h4>
+  <div class="flex-parent">
+    <div class="flex-child flex-shrink1">1</div>
+    <div class="flex-child flex-shrink2">2</div>
+    <div class="flex-child flex-shrink3">3</div>
+    <div class="flex-child flex-shrink4">4</div>
+    <div class="flex-child flex-shrink5">5</div>
+    <div class="flex-child flex-shrink6">6</div>
+  </div>
+  <h4>basis:400; недостаток места 1200-960=240;</h4> 
+  <h4>flex-shrink 1 2 2; 1+2+2=5; 240/5=48; 400-1*48=352 400-2*48=304 400-2*48=304</h4>
+  <div class="flex-parent">
+    <div class="flex-child fb400 flex-shrink1">1</div>
+    <div class="flex-child fb400 flex-shrink2">2</div>
+    <div class="flex-child fb400 flex-shrink2">2</div>
+  </div>
+  <h4>basis:400; недостаток места 1200-960=240;</h4>
+  <h4>flex-shrink 1 4 1; 1+4+1=6; 240/6=40; 400-1*40=360 400-4*40=240 400-1*40=360)</h4>
+  <div class="flex-parent">
+    <div class="flex-child fb400 flex-shrink1">1</div>
+    <div class="flex-child fb400 flex-shrink4">4</div>
+    <div class="flex-child fb400 flex-shrink1">1</div>
+  </div>
+</div>
+  <a class="back" href="./index.html">back</a>
+</body>
+</html>

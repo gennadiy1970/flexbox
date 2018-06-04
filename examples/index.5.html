@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Order</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/style.5.css">
+</head>
+<body>
+  <div class="container">
+      <h2>Order</h2>
+      <ul>
+          <li>
+              <h4>* = {order: 0}</h4>
+              <div class="flex-parent">
+                <div class="flex-child">A</div>
+                <div class="flex-child">B</div>
+                <div class="flex-child">C</div>
+                <div class="flex-child">D</div>
+                <div class="flex-child">E</div>
+                <div class="flex-child">F</div>
+               </div>
+            </li>
+        <li>
+          <h4>C = {order: 1}</h4>
+          <div class="flex-parent">
+            <div class="flex-child">A</div>
+            <div class="flex-child">B</div>
+            <div class="flex-child order1">C</div>
+            <div class="flex-child">D</div>
+            <div class="flex-child">E</div>
+            <div class="flex-child">F</div>
+           </div>
+        </li>
+        <li>
+            <h4>C = {order: 1}</h4>
+            <h4>A = {order: 2}</h4>
+            <div class="flex-parent">
+                <div class="flex-child order2">A</div>
+                <div class="flex-child">B</div>
+                <div class="flex-child order1">C</div>
+                <div class="flex-child">D</div>
+                <div class="flex-child">E</div>
+                <div class="flex-child">F</div>
+               </div>
+        </li>
+        <li>
+            <h4>C = {order: 1}</h4>
+            <h4>A = {order: 2}</h4>
+            <h4>B = {order: 3}</h4>
+            <div class="flex-parent">
+                <div class="flex-child order2">A</div>
+                <div class="flex-child order3">B</div>
+                <div class="flex-child order1">C</div>
+                <div class="flex-child">D</div>
+                <div class="flex-child">E</div>
+                <div class="flex-child">F</div>
+               </div>
+        </li>
+      </ul>
+  </div>
+  <a class="back" href="./index.html">back</a>
+</body>
+</html>

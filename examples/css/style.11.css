@@ -1,0 +1,41 @@
+.flex-parent {
+  min-height: 200px;
+  flex-wrap: wrap;
+}
+
+.flex-child {
+  height: 50px;
+  width: 280px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.flex-start {
+  align-content: flex-start;
+}
+
+.flex-end {
+  align-content: flex-end;
+}
+
+.stretch > .flex-child {
+  height: auto;
+}
+
+.stretch {
+  align-content: stretch;
+}
+
+.center {
+  align-content: center;
+}
+
+.space-between {
+  align-content: space-between;
+}
+
+.space-around {
+  align-content: space-around;
+}
+

@@ -1,0 +1,50 @@
+h4 {
+  text-align: center;
+}
+
+.flex-parent {
+  margin-bottom: 50px;
+}
+
+.flex-child {
+  /* width: 192px; */
+  /* width: 120px; */
+  width: 110px;
+  text-align: center;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.flex-child:nth-child(7n) {
+  background: var(--bg1);
+}
+
+.flex-child:nth-child(8n) {
+  background: var(--bg2);
+}
+
+.flex-child:nth-child(9n) {
+  background: var(--bg3);
+}
+
+.flex-child:nth-child(10n) {
+  background: var(--bg4);
+}
+
+.flex-child:nth-child(11n) {
+  background: var(--bg5);
+}
+
+.flex-child:nth-child(12n) {
+  background: var(--bg6);
+}

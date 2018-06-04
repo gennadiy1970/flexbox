@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex-Grow</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/style.7.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Flex-Grow</h2>
+    <h4>Равный flex-basis (100px)</h4>
+    <h4>Равный flex-grow (0 по умолчанию)</h4>
+    <div class="flex-parent">
+      <div class="flex-child">0</div>
+      <div class="flex-child">0</div>
+      <div class="flex-child">0</div>
+      <div class="flex-child">0</div>
+      <div class="flex-child">0</div>
+      <div class="flex-child">0</div>
+    </div>
+    <h4>flex-grow равны номеру блока </h4>
+    <h4>свободное место = 960 - 6 * 100 = 360</h4>
+    <h4>1+2+3+4+5+6=21частей. 360/21=17.14px </h4>
+    <h4>100px+1*17.14; 100+2*17.14; 100+3*17.14;...</h4>
+    <div class="flex-parent">
+      <div class="flex-child flex-grow1">1</div>
+      <div class="flex-child flex-grow2">2</div>
+      <div class="flex-child flex-grow3">3</div>
+      <div class="flex-child flex-grow4">4</div>
+      <div class="flex-child flex-grow5">5</div>
+      <div class="flex-child flex-grow6">6</div>
+    </div>
+    <h4>flex-grow 1 2 2; 1+2+2=56; basis+1/5 basis+2/5 basis+2/5)</h4>
+    <div class="flex-parent">
+      <div class="flex-child flex-grow1">1</div>
+      <div class="flex-child flex-grow2">2</div>
+      <div class="flex-child flex-grow2">2</div>
+    </div>
+    <h4>flex-grow 1 4 1 (1+4+1=6 1/6 4/6 1/6)</h4>
+    <div class="flex-parent">
+      <div class="flex-child flex-grow1">1</div>
+      <div class="flex-child flex-grow4">4</div>
+      <div class="flex-child flex-grow1">1</div>
+    </div>
+  </div>
+  <a class="back" href="./index.html">back</a>
+</body>
+</html>

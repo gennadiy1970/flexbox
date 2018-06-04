@@ -1,0 +1,33 @@
+.flex-parent {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.flex-child {
+    flex-basis: 100px;
+}
+
+.flex-grow1 {
+    flex-grow: 1;
+}
+
+.flex-grow2 {
+    flex-grow: 2;
+}
+
+.flex-grow3 {
+    flex-grow: 3;
+}
+
+.flex-grow4 {
+    flex-grow: 4;
+}
+
+.flex-grow5 {
+    flex-grow: 5;
+}
+
+.flex-grow6 {
+    flex-grow: 6;
+}
+

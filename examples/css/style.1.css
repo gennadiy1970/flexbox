@@ -1,0 +1,88 @@
+.flex-parent {
+  position: relative;
+}
+
+h4 {
+  text-align: center;
+}
+.row {
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+  margin-bottom: 50px;
+}
+
+.column {
+  flex-direction: column;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.column-reverse {
+  flex-direction: column-reverse;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.main-axis, 
+.reverse-axis  {
+  position: absolute;
+  width: 800px;
+  height: 2px;
+  background: navy;
+  top:50%;
+}
+
+.main-axis {
+  right: 50px;
+}
+
+.reverse-axis {
+  left: 50px;
+}
+
+.triangle,
+.triangle-r {
+  height: 0;
+  width: 0;
+  background: transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+}
+.triangle{
+  right: -15px;
+  top:-8px;
+  border-left: 10px solid navy;
+}
+.triangle-r {
+  left: -15px;
+  top:-8px;
+  border-right: 10px solid navy;
+}
+
+.cross-axis {
+  position: absolute;
+  width: 4px;
+  height: 25px;
+  left: 50%;
+  background: gold;
+}
+
+.cross-triangle {
+  height: 0;
+  width: 0;
+  background: transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid gold;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top:25px;
+  left: -7px;
+}

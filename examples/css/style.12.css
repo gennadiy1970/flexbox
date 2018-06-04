@@ -1,0 +1,52 @@
+header {
+  min-height: 150px;
+  background: hsla(240,100%,50%,0.2);
+}
+
+footer {
+  min-height: 200px;
+  background: hsla(240,100%,50%,0.5);
+}
+
+header, footer {
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul, footer ul {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+}
+
+aside {
+  width: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+section {
+  width: calc(960px - 200px);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+p {
+  text-indent: 2rem;
+}
+
+h2 {
+  text-transform: capitalize;
+}

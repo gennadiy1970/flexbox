@@ -1,0 +1,35 @@
+.flex-parent {
+    margin-bottom: 50px;
+}
+
+.flex-child {
+    flex-basis: 200px;
+}
+
+.flex-shrink1 {
+    flex-shrink: 1;
+}
+
+.flex-shrink2 {
+    flex-shrink: 2;
+}
+
+.flex-shrink3 {
+    flex-shrink: 3;
+}
+
+.flex-shrink4 {
+    flex-shrink: 4;
+}
+
+.flex-shrink5 {
+    flex-shrink: 5;
+}
+
+.flex-shrink6 {
+    flex-shrink: 6;
+}
+
+.fb400 {
+    flex-basis: 400px;
+}

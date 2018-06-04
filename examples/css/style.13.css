@@ -1,0 +1,17 @@
+.flex-parent {
+  display: flex;
+  height: 960px;
+}
+
+.flex-child {
+  display: block;
+  height: 360px;
+  width: 360px;
+  background: #f00;
+  margin: auto;
+  display: flex;
+}
+
+.box {
+  margin: auto;
+}
