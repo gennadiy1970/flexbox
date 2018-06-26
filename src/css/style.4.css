@@ -5,11 +5,11 @@
 
 .flex-child {
   min-height: 50px;
-  width: 50px;
+  /* width: 50px; */
 }
 
 .stretch {
-  align-items: stretch;
+  /* align-items: stretch; */
 }
 
 .flex-start {
@@ -26,6 +26,7 @@
 
 .baseline .flex-child:nth-of-type(1) {
   font-size: 50px;
+  line-height: 1;
 }
 
 .center {

@@ -48,3 +48,8 @@ h4 {
 .flex-child:nth-child(12n) {
   background: var(--bg6);
 }
+
+.flex-child:nth-child(15) {
+  background: var(--bg2);
+}
+

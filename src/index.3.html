@@ -15,7 +15,16 @@
   <div class="container">
     <h2>Justify-content</h2>
     <ul>
-        <li>действие блочной модели продолжается (margin/padding)</li>
+        <li>Расположение <kbd>flex-child</kbd> вдоль главной оси
+          <span class="comment">// действие блочной модели продолжается (margin/padding)</span>
+        </li>
+        <li><pre><kbd>
+.flex-parent {
+  display: flex;
+  justify-content: flex-start;
+}
+       </kbd></pre>
+        </li>
         <li>
           <h4>flex-start</h4>
           <div class="flex-parent flex-start">
@@ -82,9 +91,38 @@
             <div class="flex-child">6</div>
           </div>
         </li>
+        <li>Марджины суммируются (в т.ч. и по вертикали)</li>
+        <li><kbd>margin: auto;</kbd> дейстует по ширине и высоте одинаково - центрирует</li>
+        <li>
+            <pre><kbd>
+.flex-child {
+  margin: 5px;
+}        </kbd></pre>
+        </li>
+        <li>
+            <div class="flex-parent flex-start">
+                <div class="flex-child m5">1</div>
+                <div class="flex-child m5">2</div>
+                <div class="flex-child m5">3</div>
+                <div class="flex-child m5">4</div>
+                <div class="flex-child m5">5</div>
+                <div class="flex-child m5">6</div>
+              </div>
+        </li>
+        <li>
+            <div class="flex-parent flex-start column">
+                <div class="flex-child m5">1</div>
+                <div class="flex-child m5">2</div>
+                <div class="flex-child m5">3</div>
+                <div class="flex-child m5">4</div>
+                <div class="flex-child m5">5</div>
+                <div class="flex-child m5">6</div>
+              </div>
+        </li>
     </ul>
   </div>
   <a class="back" href="../index.html">back</a>
+  <a class="next" href="./index.4.html">next</a>
 </body>
 
 </html>

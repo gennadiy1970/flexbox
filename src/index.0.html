@@ -13,30 +13,51 @@
   <div class="container">
     <h2>Flex-контейнер и потомки</h2>
     <ul>
-      <li>Анонимные блоки для текста</li>
-      <li>Анонимные блоки с display: 'none' для пробелов </li>
-      <li>"block" === "flex" или "inline-block" === "inline-flex" </li>
-    </ul>
-    <div class="flex-parent">
-      <!-- Hello world! -->
-      <div class="flex-child">1</div>
-                                   
+      <li>Задать flex-контейнер:
+        <pre><kbd>display: flex;</kbd></pre>
+        <pre><kbd>display: inline-flex;</kbd></pre>
+      </li>
+      <li>Каждый элемент, имеющий прямого предка flex-контейнер становится flex-потомком, т.е.
+        <kbd>parent&gt;child</kbd>:
+        если
+        <pre><kbd>ul { display: flex; }</kbd></pre>
+       то все <kbd>li</kbd> являются прямыми потомками (flex-child), т.к. <kbd>ul&gt;li</kbd>.
+      </li>
+      <li><b>Анонимные блоки для текста</b>: если прямым потомком flex-контейнера оказывается текст,
+        то такой текст оборачивается в анонимный блок и этот блок является flex-потомком.
+      </li>
+      <li><b>Анонимные блоки для пробелов</b>: все пробелы, переносы и т.п.,
+        являющиеся прямыми потомками flex-контейнера, оборачивается в анонимный блок с display: 'none'.
+      </li>
+      <li>
+          <div class="flex-parent">
+              Hello world! 
+              <div class="flex-child">1</div>
+                                           
+              <div class="flex-child">2</div>
+              <div class="flex-child">3</div>
+              <div class="flex-child">4</div>
+              <div class="flex-child">5</div>
+              <div class="flex-child">6</div>
+            </div>
+      </li>
+      <li><pre><kbd>
+          &lt;div class="flex-parent"&gt;
+              Hello world! <span class="comment">// text</span>
+            &lt;div class="flex-child"&gt;1&lt;/div&gt;
+            <span class="comment">// space</span>              
+            &lt;div class="flex-child"&gt;2&lt;/div&gt;
+            &lt;div class="flex-child"&gt;3&lt;/div&gt;
+            &lt;div class="flex-child"&gt;4&lt;/div&gt;
+            &lt;div class="flex-child"&gt;5&lt;/div&gt;
+            &lt;div class="flex-child"&gt;6&lt;/div&gt;
+          &lt;/div&gt;
 
-      <div class="flex-child">2</div>
-      <div class="flex-child">3</div>
-      <div class="flex-child">4</div>
-      <div class="flex-child">5</div>
-      <div class="flex-child">6</div>
-    </div>
-    <div class="flex-parent2">
-        <div class="flex-child">1</div>
-        <div class="flex-child">2</div>
-        <div class="flex-child">3</div>
-        <div class="flex-child">4</div>
-        <div class="flex-child">5</div>
-        <div class="flex-child">6</div>
-      </div>
+      </kbd></pre>
+      </li>
+    </ul>
   </div>
   <a class="back" href="../index.html">back</a>
+  <a class="next" href="./index.1.html">next</a>
 </body>
 </html>

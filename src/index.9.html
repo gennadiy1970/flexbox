@@ -12,8 +12,15 @@
 <body>
   <div class="container">
     <h2>Flex</h2>
-    <h4>flex-grow | flex-shrink | flex-basis</h4>
-    <h4>flex: 2 2 10%;</h4>
+    <p>Краткая запись для <kbd>flex-grow</kbd>, <kbd>flex-shrink</kbd> и <kbd>flex-basis</kbd></p>
+    <p>Порядок объявления  <kbd>flex: grow shrink basis;</kbd></p>
+    <p>По умолчанию - <kbd>flex: 0 1 auto;</kbd></p>
+    <h4>flex: 2 1 10%;</h4>
+    <pre><kbd>
+.flex-child { 
+  flex: 2 1 10%; <span class="comment">// grow shrink basis</span>
+}
+    </kbd></pre>
     <div class="flex-parent">
       <div class="flex-child">1</div>
       <div class="flex-child">2</div>
@@ -22,7 +29,18 @@
       <div class="flex-child">5</div>
       <div class="flex-child">6</div>
     </div>
+    <p>Пример расчета занимаемого места:</p>
+    <pre><code>
+basis = 960px / 10 = 96px;
+свободное место = 960px - 6 * 96px = <span class="red">384px</span>      
+сумма всех flex-grow = 2 * 6 = <span class="red">12</span>
+на 1 flex-grow приходится 384px / 12 = <span class="red">32px</span>
+ширина элемента равна <span class="red">96px</span> + flex-grow * 32px
+flex-grow: 2; <i class="comment">// <span class="red">96px + 2 * 32</span> = 160px</i>
+  
+    </code></pre> 
   </div>
   <a class="back" href="../index.html">back</a>
+  <a class="next" href="./index.10.html">next</a>
 </body>
 </html>

@@ -15,3 +15,15 @@
 .box {
   margin: auto;
 }
+
+.pre-css {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.pre-html {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}

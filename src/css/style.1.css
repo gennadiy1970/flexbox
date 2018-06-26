@@ -28,7 +28,7 @@ h4 {
 }
 
 .main-axis, 
-.reverse-axis  {
+.reverse-axis{
   position: absolute;
   width: 800px;
   height: 2px;
@@ -36,16 +36,28 @@ h4 {
   top:50%;
 }
 
+.main-axis2 {
+  position: absolute;
+  width: 4px;
+  height: 190px;
+  background: navy;
+  left: 50%;
+  top: 10px;
+  z-index: 10;
+}
+
 .main-axis {
   right: 50px;
+  z-index: 10;
 }
 
 .reverse-axis {
   left: 50px;
+  z-index: 10;
 }
 
 .triangle,
-.triangle-r {
+.triangle-r{
   height: 0;
   width: 0;
   background: transparent;
@@ -74,15 +86,56 @@ h4 {
   background: gold;
 }
 
-.cross-triangle {
+.cross-axis2 {
+  position: absolute;
+  height: 4px;
+  width: 750px;
+  top: 50%;
+  left: 120px;
+  background: gold;
+}
+
+.cross-triangle,
+.cross-triangle2,
+.triangle2-r,
+.triangle2 {
   height: 0;
   width: 0;
   background: transparent;
+  border-top: 10px solid transparent;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid gold;
   border-bottom: 10px solid transparent;
   position: absolute;
+}
+.cross-triangle {
   top:25px;
   left: -7px;
+  border-top: 10px solid gold;
+}
+.cross-triangle2 {
+  top:-7px;
+  right: -15px;
+  border-left: 10px solid gold;
+}
+
+.triangle2 {
+  border-top: 10px solid navy;
+  bottom: -12px;
+  right: -8px;
+}
+
+.triangle2-r {
+  border-bottom: 10px solid navy;
+  top: -12px;
+  right: -8px;
+}
+
+.w100 {
+  width: 100px;
+}
+
+.column > .flex-child,
+.column-reverse > .flex-child {
+  text-indent: 3rem;
 }

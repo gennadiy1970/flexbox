@@ -12,6 +12,15 @@
 <body>
   <div class="container">
     <h2>Flex-direcrion и оси</h2>
+    <p>Две оси - основная горизонтальная <kbd>row</kbd>, 
+      основная вертикальная <kbd>column</kbd> и поперечная.</p>
+    <p>У основной оси направление может меняться на <kbd>row-reverse</kbd> и <kbd>column-reverse</kbd></p>
+    <div>Поперечная ось всегда под углом 90градусов к основной, но направление на противоположное не изменяется:
+      <ul>
+        <li>поперечная ось при <kbd>row</kbd> и <kbd>row-reverse</kbd> направлена сверху вниз</li>
+        <li>поперечная ось при <kbd>column</kbd> и <kbd>column-reverse</kbd> направлена слева направо</li>
+      </ul> 
+    </div>
     <ul>
       <li>
         <h4>row</h4>
@@ -27,7 +36,7 @@
             </div>
             <div class="cross-axis">
                 <span class="cross-triangle"></span>
-              </div>
+            </div>
           </div>
       </li>
       <li>
@@ -56,6 +65,12 @@
             <div class="flex-child">4</div>
             <div class="flex-child">5</div>
             <div class="flex-child">6</div>
+            <div class="main-axis2">
+                <span class="triangle2"></span>
+            </div>
+            <div class="cross-axis2">
+                  <span class="cross-triangle2"></span>
+            </div>
           </div>
       </li>
       <li>
@@ -67,10 +82,52 @@
             <div class="flex-child">4</div>
             <div class="flex-child">5</div>
             <div class="flex-child">6</div>
+            <div class="main-axis2">
+              <span class="triangle2-r"></span>
+            </div>
+            <div class="cross-axis2">
+              <span class="cross-triangle2"></span>
+            </div>
           </div>
+      </li>
+
+      <li>
+        <h4>column width:100px</h4>
+        <div class="flex-parent column">
+          <div class="flex-child w100">1</div>
+          <div class="flex-child w100">2</div>
+          <div class="flex-child w100">3</div>
+          <div class="flex-child w100">4</div>
+          <div class="flex-child w100">5</div>
+          <div class="flex-child w100">6</div>
+          <div class="main-axis2">
+              <span class="triangle2"></span>
+          </div>
+          <div class="cross-axis2">
+                <span class="cross-triangle2"></span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <h4>column-reverse  width:100px</h4>
+        <div class="flex-parent column-reverse">
+          <div class="flex-child w100">1</div>
+          <div class="flex-child w100">2</div>
+          <div class="flex-child w100">3</div>
+          <div class="flex-child w100">4</div>
+          <div class="flex-child w100">5</div>
+          <div class="flex-child w100">6</div>
+          <div class="main-axis2">
+              <span class="triangle2-r"></span>
+          </div>
+          <div class="cross-axis2">
+                <span class="cross-triangle2"></span>
+          </div>
+        </div>
       </li>
     </ul>
   </div>
     <a class="back" href="../index.html">back</a>
+    <a class="next" href="./index.2.html">next</a>
 </body>
 </html>

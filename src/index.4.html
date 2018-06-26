@@ -12,7 +12,13 @@
 <body>
   <div class="container">
       <h2>Align-items</h2>
-      <h4>Расположение вдоль вспомогательной оси</h4>
+      <p>Расположение всех <kbd>flex-child</kbd> вдоль вспомогательной оси</p>
+      <p>Задается <kbd>flex-parent</kbd>. По умолчанию устанавливается <kbd>stretch</kbd>
+        <pre><kbd>
+.flex-parent {
+ <span class="comment">/* align-items: stretch; */</span>
+}    
+      </kbd></pre></p>
       <ul>
         <li>
           <h4>stretch</h4>
@@ -27,6 +33,11 @@
         </li>
         <li>
           <h4>flex-start</h4>
+          <pre><kbd>
+.flex-parent {
+  align-items: flex-start;
+}    
+          </kbd></pre>          
           <div class="flex-parent flex-start">
               <div class="flex-child">1</div>
               <div class="flex-child">2</div>
@@ -38,6 +49,11 @@
         </li>
         <li>
           <h4>flex-end</h4>
+          <pre><kbd>
+.flex-parent {
+  align-items: flex-end;
+}    
+          </kbd></pre>           
           <div class="flex-parent flex-end">
               <div class="flex-child">1</div>
               <div class="flex-child">2</div>
@@ -49,6 +65,15 @@
         </li>
         <li>
           <h4>baseline</h4>
+          <pre><kbd>
+.flex-parent {
+  align-items: baseline;
+} 
+.flex-child:nth-of-type(1) {
+  font-size: 50px;
+  line-height: 1;
+}   
+          </kbd></pre>           
           <div class="flex-parent baseline">
               <div class="flex-child">1</div>
               <div class="flex-child">2</div>
@@ -60,6 +85,11 @@
         </li>
         <li>
           <h4>center</h4>
+          <pre><kbd>
+.flex-parent {
+  align-items: center;
+}    
+         </kbd></pre>          
           <div class="flex-parent center">
             <div class="flex-child">1</div>
             <div class="flex-child">2</div>
@@ -72,5 +102,6 @@
       </ul>
   </div>
   <a class="back" href="../index.html">back</a>
+  <a class="next" href="./index.5.html">next</a>
 </body>
 </html>

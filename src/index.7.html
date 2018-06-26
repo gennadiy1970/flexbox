@@ -12,8 +12,14 @@
 <body>
   <div class="container">
     <h2>Flex-Grow</h2>
-    <h4>Равный flex-basis (100px)</h4>
-    <h4>Равный flex-grow (0 по умолчанию)</h4>
+    <p>Правило для распределения свободного места. Задается для <kbd>flex-child</kbd></p>
+    <p>По умолчанию <kbd>flex-grow: 0;</kbd> </p>
+    <pre><kbd>
+.flex-child {
+    flex-basis: 100px;
+    <span class="comment"> /* flex-grow: 0;  */</span>
+}      
+    </kbd></pre>
     <div class="flex-parent">
       <div class="flex-child">0</div>
       <div class="flex-child">0</div>
@@ -22,31 +28,115 @@
       <div class="flex-child">0</div>
       <div class="flex-child">0</div>
     </div>
-    <h4>flex-grow равны номеру блока </h4>
-    <h4>свободное место = 960 - 6 * 100 = 360</h4>
-    <h4>1+2+3+4+5+6=21частей. 360/21=17.14px </h4>
-    <h4>100px+1*17.14; 100+2*17.14; 100+3*17.14;...</h4>
+
+    
+    <!-- <h4>flex-grow 1 2 2; 1+2+2=56; basis+1/5 basis+2/5 basis+2/5)</h4> -->
+    <h4>1:2:2</h4>
+    <pre><kbd>
+.flex-child {
+  flex-basis: 100px;
+}
+.flex-child:nth-of-type(1) {
+  flex-grow: 1;
+}
+.flex-child:nth-of-type(2) {
+  flex-grow: 2;
+}
+.flex-child:nth-of-type(3) {
+  flex-grow: 2;
+}      
+    </kbd></pre>
     <div class="flex-parent">
       <div class="flex-child flex-grow1">1</div>
       <div class="flex-child flex-grow2">2</div>
-      <div class="flex-child flex-grow3">3</div>
+      <div class="flex-child flex-grow2">2</div>
+    </div>
+    <p>Пример расчета занимаемого места:</p>
+    <pre><code>
+свободное место = 960px - 3 * 100px = <span class="red">660px</span>
+сумма всех flex-grow = 1 + 2 + 2 = <span class="red">5</span>
+на 1 flex-grow приходится 660px / 5 = <span class="red">132px</span>
+ширина элемента равна <span class="red">100px</span> + flex-grow * 17.14px
+flex-grow: 1; <i class="comment">// <span class="red">100px + 1 * 132</span> = 232px</i>
+flex-grow: 2; <i class="comment">// <span class="red">100px + 2 * 132</span> = 364px</i>
+  
+    </code></pre>
+    <h4>1:4:1</h4>
+    <div class="flex-parent">
+      <div class="flex-child flex-grow1">1</div>
       <div class="flex-child flex-grow4">4</div>
-      <div class="flex-child flex-grow5">5</div>
-      <div class="flex-child flex-grow6">6</div>
+      <div class="flex-child flex-grow1">1</div>
     </div>
-    <h4>flex-grow 1 2 2; 1+2+2=56; basis+1/5 basis+2/5 basis+2/5)</h4>
+    <pre><kbd>
+.flex-child {
+  flex-basis: 100px;
+}
+.flex-child:nth-of-type(1) {
+  flex-grow: 1;
+}
+.flex-child:nth-of-type(2) {
+  flex-grow: 4;
+}
+.flex-child:nth-of-type(3) {
+  flex-grow: 1;
+}      
+    </kbd></pre>
+        <pre><code>
+свободное место = 960px - 3 * 100px = <span class="red">660px</span>
+сумма всех flex-grow = 1 + 4 + 1 = <span class="red">6</span>
+на 1 flex-grow приходится 660px / 6 = <span class="red">110px</span>
+ширина элемента равна <span class="red">100px</span> + flex-grow * 17.14px
+flex-grow: 1; <i class="comment">// <span class="red">100px + 1 * 110</span> = 210px</i>
+flex-grow: 4; <i class="comment">// <span class="red">100px + 4 * 110</span> = 540px</i>
+  
+    </code></pre>
+
+
+    <h4>1:2:3:4:5:6 </h4>
     <div class="flex-parent">
-      <div class="flex-child flex-grow1">1</div>
-      <div class="flex-child flex-grow2">2</div>
-      <div class="flex-child flex-grow2">2</div>
-    </div>
-    <h4>flex-grow 1 4 1 (1+4+1=6 1/6 4/6 1/6)</h4>
-    <div class="flex-parent">
-      <div class="flex-child flex-grow1">1</div>
-      <div class="flex-child flex-grow4">4</div>
-      <div class="flex-child flex-grow1">1</div>
-    </div>
+        <div class="flex-child flex-grow1">1</div>
+        <div class="flex-child flex-grow2">2</div>
+        <div class="flex-child flex-grow3">3</div>
+        <div class="flex-child flex-grow4">4</div>
+        <div class="flex-child flex-grow5">5</div>
+        <div class="flex-child flex-grow6">6</div>
+      </div>
+          <pre><kbd>
+.flex-child {
+  flex-basis: 100px;
+}
+.flex-child:nth-of-type(1) {
+  flex-grow: 1;
+}
+.flex-child:nth-of-type(2) {
+  flex-grow: 2;
+}
+.flex-child:nth-of-type(3) {
+  flex-grow: 3;
+}
+.flex-child:nth-of-type(4) {
+  flex-grow: 4;
+}
+.flex-child:nth-of-type(5) {
+  flex-grow: 5;
+}
+.flex-child:nth-of-type(6) {
+  flex-grow: 6;
+}   
+    </kbd></pre>
+    <p>Пример расчета занимаемого места:</p>
+    <pre><code>
+свободное место = 960px - 6 * 100px = <span class="red">360px</span>
+сумма всех flex-grow = 1 + 2 + 3 + 4 + 5 + 6 = <span class="red">21</span>
+на 1 flex-grow приходится 360px / 21 = <span class="red">17.14px</span>
+ширина элемента равна <span class="red">100px</span> + flex-grow * 17.14px
+flex-grow: 1; <i class="comment">// <span class="red">100px + 1 * 17.14</span> = 117.14px</i>
+flex-grow: 2; <i class="comment">// <span class="red">100px + 2 * 17.14</span> = 134.28px</i>
+...
+flex-grow: 6; <i class="comment">// <span class="red">100px + 2 * 17.14</span> = 202.84px</i>
+    </code></pre>
   </div>
   <a class="back" href="../index.html">back</a>
+  <a class="next" href="./index.8.html">next</a>
 </body>
 </html>

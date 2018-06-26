@@ -14,7 +14,12 @@
       <h2>Order</h2>
       <ul>
           <li>
-              <h4>* = {order: 0}</h4>
+              <h4>По умолчанию</h4>
+              <pre><kbd>
+.flex-child {
+    order: 0;
+}
+              </kbd></pre>
               <div class="flex-parent">
                 <div class="flex-child">A</div>
                 <div class="flex-child">B</div>
@@ -25,7 +30,12 @@
                </div>
             </li>
         <li>
-          <h4>C = {order: 1}</h4>
+          <h4>сместим C вправо <span class="comment">// order: 1;</span></h4>
+          <pre><kbd>
+.flex-child:nth-of-type(3) { <span class="comment">// C</span>
+    order: 1;
+}              
+          </kbd></pre>
           <div class="flex-parent">
             <div class="flex-child">A</div>
             <div class="flex-child">B</div>
@@ -36,8 +46,15 @@
            </div>
         </li>
         <li>
-            <h4>C = {order: 1}</h4>
-            <h4>A = {order: 2}</h4>
+            <h4>CA расположим справа</h4>
+            <pre><kbd>
+.flex-child:nth-of-type(1) { <span class="comment">// A</span>
+    order: 2;
+}
+.flex-child:nth-of-type(3) { <span class="comment">// C</span>
+    order: 1;
+}                              
+            </kbd></pre>
             <div class="flex-parent">
                 <div class="flex-child order2">A</div>
                 <div class="flex-child">B</div>
@@ -48,9 +65,18 @@
                </div>
         </li>
         <li>
-            <h4>C = {order: 1}</h4>
-            <h4>A = {order: 2}</h4>
-            <h4>B = {order: 3}</h4>
+            <h4>CAB расположим справа</h4>
+            <pre><kbd>
+.flex-child:nth-of-type(1) { <span class="comment">// A</span>
+    order: 2;
+}
+.flex-child:nth-of-type(2) { <span class="comment">// B</span>
+    order: 3;
+}
+.flex-child:nth-of-type(3) { <span class="comment">// C</span>
+    order: 1;
+}
+            </kbd></pre>
             <div class="flex-parent">
                 <div class="flex-child order2">A</div>
                 <div class="flex-child order3">B</div>
@@ -63,5 +89,6 @@
       </ul>
   </div>
   <a class="back" href="../index.html">back</a>
+  <a class="next" href="./index.6.html">next</a>
 </body>
 </html>

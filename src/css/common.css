@@ -1,88 +1,125 @@
 :root {
-    --bg1: hsl(0,67%,50%);
-    --bg2: hsl(60,67%,50%);
-    --bg3: hsl(120,67%,50%);
-    --bg4: hsl(180,67%,50%);
-    --bg5: hsl(240,67%,50%);
-    --bg6: hsl(300,67%,50%);
-  }
+  --bg1: hsl(0, 67%, 50%);
+  --bg2: hsl(60, 67%, 50%);
+  --bg3: hsl(120, 67%, 50%);
+  --bg4: hsl(180, 67%, 50%);
+  --bg5: hsl(240, 67%, 50%);
+  --bg6: hsl(300, 67%, 50%);
+}
 
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    background: navy;
-    font-size: 30px;
-    font-family: sans-serif;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
 
-  h2 {
-    text-align: center;
-  }
+body {
+  background: navy;
+  font-size: 30px;
+  font-family: sans-serif;
+}
 
-  .container {
-    width: 960px;
-    margin: auto;
-    min-height: 100vh;
-    background: #fff;
-    box-sizing: border-box;
-  }
-  
-  .flex-parent {
-    display: flex;
-    background: hsla(0, 0%, 0%, 0.2);
-  }
-  
-  .flex-child:nth-of-type(1) {
-    background: var(--bg1);
-  }
-  .flex-child:nth-of-type(2) {
-    background: var(--bg2);
-  }
-  .flex-child:nth-of-type(3) {
-    background: var(--bg3);
-  }
-  .flex-child:nth-of-type(4) {
-    background: var(--bg4);
-  }
-  .flex-child:nth-of-type(5) {
-    background: var(--bg5);
-  }
-  .flex-child:nth-of-type(6) {
-    background: var(--bg6);
-  }
-  
-  .back {
-    position: fixed;
-    display: block;
-    bottom: 50px;
-    right: 50px;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    background: navy;
-    color: gold;
-    cursor: pointer;
-    box-shadow: 0 0 5px 2px hsla(0, 100%, 100%, 0.2);
-  }
-  
-  .back:hover {
-    box-shadow: 0 0 5px 4px hsla(0, 100%, 100%, 0.5);
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  line-height: 2;
+}
 
-  ul {
-      list-style: none;
-  }
+.container {
+  width: 960px;
+  margin: auto;
+  min-height: 100vh;
+  /* background: #fff; */
+  box-sizing: border-box;
+  padding: 10px;
+  color: #fff;
+  box-shadow: 0 0 2px 2px hsla(0, 100%, 100%, 0.2);
+}
 
-  ol {
-      margin-left: 50px;
-  }
+p {
+  text-indent: 2rem;
+  line-height: 1.5;
+}
 
-  h4 {
-    text-align: center;
-  }
+kbd {
+  color: gold;
+}
+
+.comment {
+  font-style: italic;
+  color: grey;
+}
+
+.flex-parent {
+  display: flex;
+  /* background: hsla(0, 0%, 0%, 0.2); */
+  background: grey;
+}
+
+.flex-child:nth-of-type(1) {
+  background: var(--bg1);
+}
+.flex-child:nth-of-type(2) {
+  background: var(--bg2);
+}
+.flex-child:nth-of-type(3) {
+  background: var(--bg3);
+}
+.flex-child:nth-of-type(4) {
+  background: var(--bg4);
+}
+.flex-child:nth-of-type(5) {
+  background: var(--bg5);
+}
+.flex-child:nth-of-type(6) {
+  background: var(--bg6);
+}
+.back,
+.next {
+  position: fixed;
+  display: block;
+  bottom: 50px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  background: navy;
+  color: gold;
+  cursor: pointer;
+  box-shadow: 0 0 5px 2px hsla(0, 100%, 100%, 0.2);
+}
+.next {
+  right: 50px;
+}
+.back {
+  left: 50px;
+}
+.back:hover,
+.next:hover {
+  box-shadow: 0 0 5px 4px hsla(0, 100%, 100%, 0.5);
+}
+
+ul {
+  list-style: none;
+}
+
+ol {
+  margin-left: 50px;
+}
+
+a {
+  color: #fff;
+}
+
+.red {
+  color: red;
+}
+
+.container {
+  width: 980px;
+}

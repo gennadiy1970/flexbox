@@ -12,9 +12,20 @@
 <body>
   <div class="container">
       <h2>Flex-wrap</h2>
+      <p>Перенос <kbd>flex-child</kbd> на новую строку и запрет такого переноса.</p>
       <ul>
         <li>
           <h4>nowrap</h4>
+          <pre><kbd>
+.flex-parent {
+  display:flex;
+  flex-wrap: nowrap;
+  width: 960px;
+}
+.flex-child {
+  width: 110px;
+}
+</kbd></pre>
           <div class="flex-parent nowrap">
               <div class="flex-child">1</div>
               <div class="flex-child">2</div>
@@ -34,6 +45,10 @@
             </div>
         </li>
         <li>
+            <pre><kbd>
+.flex-parent {
+  flex-wrap: wrap;
+}          </kbd></pre>          
           <h4>wrap</h4>
           <div class="flex-parent wrap">
               <div class="flex-child">1</div>
@@ -55,6 +70,10 @@
         </li>
         <li>
           <h4>wrap-reverse</h4>
+          <pre><kbd>
+.flex-parent {
+  flex-wrap: wrap-reverse;
+}          </kbd></pre>           
         </li>
       </ul>
     <div class="flex-parent wrap-reverse">
@@ -76,5 +95,6 @@
     </div>
   </div>
   <a class="back" href="../index.html">back</a>
+  <a class="next" href="./index.3.html">next</a>
 </body>
 </html>

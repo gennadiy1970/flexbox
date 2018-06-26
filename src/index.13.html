@@ -15,10 +15,40 @@
   <div class="container">
       <div class="flex-parent">
         <div class="flex-child">
-          <div class="box">hello</div>
+          <div class="box">center</div>
         </div>
       </div>
   </div>
+  <pre class="pre-css"><kbd>
+.flex-parent {
+  <span class="red">display: flex;</span>
+  height: 960px;
+  width: 960px;
+  background: grey;  
+}
+
+.flex-child {
+  display: block;
+  height: 360px;
+  width: 360px;
+  background: #f00;
+  <span class="red">margin: auto;</span>
+  <span class="red">display: flex;</span>
+}
+
+.box {
+  <span class="red">margin: auto;</span>
+}    
+  </kbd></pre>
+  <pre class="pre-html"><kbd>
+&lt;div class="flex-parent"&gt;
+  &lt;div class="flex-child"&gt;
+    &lt;div class="box"&gt;
+      center
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  </kbd></pre>
   <a class="back" href="../index.html">back</a>
 </body>
 

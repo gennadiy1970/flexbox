@@ -4,6 +4,7 @@
 
 .flex-child {
     flex-basis: 200px;
+    text-align: center;
 }
 
 .flex-shrink1 {

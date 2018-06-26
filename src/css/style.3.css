@@ -29,3 +29,16 @@ h4 {
 .center {
   justify-content: center;
 }
+
+.flex-child {
+  text-align: center;
+}
+
+.m5 {
+  margin: 50px;
+  display: block;
+}
+
+.column {
+  flex-direction: column;
+}

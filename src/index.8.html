@@ -12,8 +12,14 @@
 <body>
   <div class="container">
     <h2>Flex-Shrink</h2>
-    <h4>Равный flex-basis (200px)</h4>
-    <h4>Равный flex-shrink (1 по умолчанию)</h4>
+    <p>Правило для распределения дефицита места. Задается для <kbd>flex-child</kbd></p>
+    <p>По умолчанию <kbd>flex-shrink: 1;</kbd> </p>
+        <pre><kbd>
+.flex-child {
+    flex-basis: 200px;
+    <span class="comment"> /* flex-shrink: 1;  */</span>
+}      
+    </kbd></pre>
     <div class="flex-parent">
       <div class="flex-child">1</div>
       <div class="flex-child">2</div>
@@ -22,10 +28,109 @@
       <div class="flex-child">5</div>
       <div class="flex-child">6</div>
     </div>
-  <h4>flex-shrink равны номеру блока</h4>
-  <h4>недостаток места =  6 * 200 - 960 = 240</h4>
+    <p>Пример расчета занимаемого места:</p>
+    <pre><code>
+дефицит места = 960px - 6 * 200px = <span class="red">-240px</span>
+сумма всех flex-shrink = 1 * 6 = <span class="red">6</span>
+на 1 flex-shrink приходится 240px / 6 = <span class="red">40px</span>
+ширина элемента равна <span class="red">200px</span> - flex-shrink * 40px
+flex-shrink: 1; <i class="comment">// <span class="red">200px - 1 * 40</span> = 160px</i>
+  
+    </code></pre>    
+
+    <!-- <h4>basis:400; недостаток места 1200-960=240;</h4>  -->
+    <!-- <h4>flex-shrink 1 2 2; 1+2+2=5; 240/5=48; 400-1*48=352 400-2*48=304 400-2*48=304</h4> -->
+    <h4>1:2:2</h4>
+    <pre><kbd>
+.flex-child {
+  flex-basis: 400px;
+}
+.flex-child:nth-of-type(1) {
+  flex-shrink: 1;
+}
+.flex-child:nth-of-type(2) {
+  flex-shrink: 2;
+}
+.flex-child:nth-of-type(3) {
+  flex-shrink: 2;
+}      
+    </kbd></pre>
+    <div class="flex-parent">
+      <div class="flex-child fb400 flex-shrink1">1</div>
+      <div class="flex-child fb400 flex-shrink2">2</div>
+      <div class="flex-child fb400 flex-shrink2">2</div>
+    </div>
+    <p>Пример расчета занимаемого места:</p>
+    <pre><code>
+дефицит места = 960px - 3 * 400px = <span class="red">-240px</span>
+сумма всех flex-shrink = 1 + 2 + 2 = <span class="red">5</span>
+на 1 flex-shrink приходится 240px / 5 = <span class="red">48px</span>
+ширина элемента равна <span class="red">400px</span> - flex-shrink * 48px
+flex-shrink: 1; <i class="comment">// <span class="red">400px - 1 * 48</span> = 352px</i>
+flex-shrink: 2; <i class="comment">// <span class="red">400px - 2 * 48</span> = 304px</i>
+  
+    </code></pre>    
+
+    <h4>1:4:1</h4>
+    <pre><kbd>
+.flex-child {
+  flex-basis: 400px;
+}
+.flex-child:nth-of-type(1) {
+  flex-shrink: 1;
+}
+.flex-child:nth-of-type(2) {
+  flex-shrink: 4;
+}
+.flex-child:nth-of-type(3) {
+  flex-shrink: 1;
+}      
+    </kbd></pre>    
+    <!-- <h4>basis:400; недостаток места 1200-960=240;</h4> -->
+    <!-- <h4>flex-shrink 1 4 1; 1+4+1=6; 240/6=40; 400-1*40=360 400-4*40=240 400-1*40=360)</h4> -->
+    <div class="flex-parent">
+      <div class="flex-child fb400 flex-shrink1">1</div>
+      <div class="flex-child fb400 flex-shrink4">4</div>
+      <div class="flex-child fb400 flex-shrink1">1</div>
+    </div>
+    <p>Пример расчета занимаемого места:</p>
+    <pre><code>
+дефицит места = 960px - 3 * 400px = <span class="red">-240px</span>
+сумма всех flex-shrink = 1 + 4 + 1 = <span class="red">6</span>
+на 1 flex-shrink приходится 240px / 5 = <span class="red">40px</span>
+ширина элемента равна <span class="red">400px</span> - flex-shrink * 40px
+flex-shrink: 1; <i class="comment">// <span class="red">400px - 1 * 40</span> = 360px</i>
+flex-shrink: 2; <i class="comment">// <span class="red">400px - 4 * 40</span> = 240px</i>
+  
+    </code></pre> 
+
+  <h4>1:2:3:4:5:6</h4>
+      <pre><kbd>
+.flex-child {
+  flex-basis: 200px;
+}
+.flex-child:nth-of-type(1) {
+  flex-shrink: 1;
+}
+.flex-child:nth-of-type(2) {
+  flex-shrink: 2;
+}
+.flex-child:nth-of-type(3) {
+  flex-shrink: 3;
+}
+.flex-child:nth-of-type(4) {
+  flex-shrink: 4;
+}
+.flex-child:nth-of-type(5) {
+  flex-shrink: 5;
+}
+.flex-child:nth-of-type(6) {
+  flex-shrink: 6;
+}      
+    </kbd></pre>
+  <!-- <h4>недостаток места =  6 * 200 - 960 = 240</h4>
   <h4>1+2+3+4+5+6=21частей. 240/21=11.43px </h4>
-    <h4>200px-1*11.43; 200px-2*11.43; 200px-3*11.43;...</h4>
+    <h4>200px-1*11.43; 200px-2*11.43; 200px-3*11.43;...</h4> -->
   <div class="flex-parent">
     <div class="flex-child flex-shrink1">1</div>
     <div class="flex-child flex-shrink2">2</div>
@@ -34,21 +139,20 @@
     <div class="flex-child flex-shrink5">5</div>
     <div class="flex-child flex-shrink6">6</div>
   </div>
-  <h4>basis:400; недостаток места 1200-960=240;</h4> 
-  <h4>flex-shrink 1 2 2; 1+2+2=5; 240/5=48; 400-1*48=352 400-2*48=304 400-2*48=304</h4>
-  <div class="flex-parent">
-    <div class="flex-child fb400 flex-shrink1">1</div>
-    <div class="flex-child fb400 flex-shrink2">2</div>
-    <div class="flex-child fb400 flex-shrink2">2</div>
-  </div>
-  <h4>basis:400; недостаток места 1200-960=240;</h4>
-  <h4>flex-shrink 1 4 1; 1+4+1=6; 240/6=40; 400-1*40=360 400-4*40=240 400-1*40=360)</h4>
-  <div class="flex-parent">
-    <div class="flex-child fb400 flex-shrink1">1</div>
-    <div class="flex-child fb400 flex-shrink4">4</div>
-    <div class="flex-child fb400 flex-shrink1">1</div>
-  </div>
+  <p>Пример расчета занимаемого места:</p>
+    <pre><code>
+дефицит места = 960px - 6 * 200px = <span class="red">-240px</span>
+сумма всех flex-shrink = 1 + 2 + 3 + 4 + 5 + 6 = <span class="red">21</span>
+на 1 flex-shrink приходится 240px / 21 = <span class="red">11.43px</span>
+ширина элемента равна <span class="red">200px</span> - flex-shrink * 11.43px
+flex-shrink: 1; <i class="comment">// <span class="red">200px - 1 * 11.43</span> = 188.57px</i>
+flex-shrink: 2; <i class="comment">// <span class="red">200px - 2 * 11.43</span> = 177.14px</i>
+...
+flex-shrink: 2; <i class="comment">// <span class="red">200px - 6 * 11.43</span> = 131.42px</i>
+  
+    </code></pre> 
 </div>
   <a class="back" href="../index.html">back</a>
+  <a class="next" href="./index.9.html">next</a>
 </body>
 </html>

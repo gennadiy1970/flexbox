@@ -12,7 +12,29 @@
 <body>
   <div class="container">
     <h2>Flex-Basis</h2>
-    <p>Работает как width пока есть свободное место между блоками.</p>
+    <p>Работает как <kbd>width</kbd> для <kbd>flex-child</kbd> пока есть свободное место между блоками.</p>
+    <pre><kbd>
+.flex-child:nth-of-type(1) {
+    flex-basis: 100px;
+}
+
+.flex-child:nth-of-type(2) {
+    flex-basis: 10rem;
+}
+
+.flex-child:nth-of-type(3) {
+    flex-basis: 10%;
+}
+
+.flex-child:nth-of-type(4) {
+    flex-basis: 10em;
+}
+
+.flex-child:nth-of-type(5),
+.flex-child:nth-of-type(6) {
+    flex-basis: 100px;
+}
+    </kbd></pre>
     <div class="flex-parent">
       <div class="flex-child">1</div>
       <div class="flex-child">2</div>
@@ -31,8 +53,30 @@
       <div class="flex-child w">5</div>
       <div class="flex-child w">6</div>
     </div>
-    
+    <pre><kbd>
+.flex-child:nth-of-type(1) {
+  flex-basis: 300px;
+}
+
+.flex-child:nth-of-type(2) {
+  flex-basis: 30rem;
+}
+
+.flex-child:nth-of-type(3) {
+  flex-basis: 30%;
+}
+
+.flex-child:nth-of-type(4) {
+  flex-basis: 30em;
+}
+
+.flex-child:nth-of-type(5),
+.flex-child:nth-of-type(6) {
+  flex-basis: 300px;
+}
+    </kbd></pre>   
   </div>
   <a class="back" href="../index.html">back</a>
+  <a class="next" href="./index.7.html">next</a>
 </body>
 </html>

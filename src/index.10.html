@@ -12,6 +12,51 @@
 <body>
   <div class="container">
     <h2>Align-self</h2>
+    <p>Расположение индивидуального <kbd>flex-child</kbd> вдоль вспомогательной оси.
+    Задается <kbd>flex-child</kbd>.</p>
+    <pre><kbd>
+.flex-parent {
+  min-height: 200px;
+}
+
+.flex-child {
+  <span class="comment">/* height: auto; */ </span>
+  height: 100px;
+  min-width: 100px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.flex-child:nth-of-type(1) {
+  align-self: auto;
+}
+
+.flex-child:nth-of-type(2) {
+  align-self: center;
+}
+
+.flex-child:nth-of-type(3) {
+  height: auto;
+  align-self: stretch;
+}
+
+.flex-child:nth-of-type(4) {
+  align-self: baseline;
+}
+
+.flex-child:nth-of-type(5) {
+  align-self: flex-end;
+}
+
+.flex-child:nth-of-type(6) {
+  align-self: flex-start;
+}
+
+.flex-child:nth-of-type(7) {
+  align-self: initial;
+}
+    </kbd></pre>
     <div class="flex-parent">
       <div class="flex-child">auto</div>
       <div class="flex-child">center</div>
@@ -23,5 +68,6 @@
     </div>
   </div>
   <a class="back" href="../index.html">back</a>
+  <a class="next" href="./index.11.html">next</a>
 </body>
 </html>
